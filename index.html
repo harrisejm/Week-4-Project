@@ -12,7 +12,8 @@
 <body>
   <div class="container">
 
-  <p id="test"></p>
+<div class="row">
+  <div class="col-md-6 selection">
 
   <form id="formOne">
     <div class="form-group">
@@ -23,43 +24,49 @@
       <div class="radio">
       <label>
         <input type="radio" name="size" value="small" checked>
-        Small 11"
+        Small 11" <strong>$9.99</strong>
       </label>
     </div>
 
     <div class="radio">
       <label>
         <input type="radio" name="size" value="medium">
-        Medium 13"
+        Medium 13" <strong>$13.99</strong>
       </label>
     </div>
     <div class="radio">
       <label>
         <input type="radio" name="size" value="large">
-        Large 17"
+        Large 16" <strong>$17.99</strong>
       </label>
     </div>
     <div class="radio">
       <label>
         <input type="radio" name="size" value="giant">
-        Giant 60"
+        Giant 60" <strong> $49.99 (Must Order 24 hours in advance)</strong>
       </label>
     </div>
 
   <h2>Select Toppings</h2>
   <div class="form-group">
-      <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
-      <input type="checkbox" name="toppings" value="Bacon">Bacon<br>
-      <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
-      <input type="checkbox" name="toppings" value="Onions">Onions<br>
-      <input type="checkbox" name="toppings" value="Black olives">Black olives<br>
+      <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni +$2.00<br>
+      <input type="checkbox" name="toppings" value="Bacon">Bacon +$2.00<br>
+      <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms +$2.00<br>
+      <input type="checkbox" name="toppings" value="Onions">Onions +$2.00<br>
+      <input type="checkbox" name="toppings" value="Black olives">Black olives +$2.00<br>
   </div>
 
 
 
     <button type="submit" class="btn">Place Order</button>
   </form>
-
+  </div>
+  <div class="col-md-6 output">
+     <p id="test1"></p>
+     <p id="test2"></p>
+     <p id="test3"></p>
+     <p id="test4"></p>
+  </div>
 
 </div>
 

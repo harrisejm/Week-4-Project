@@ -11,13 +11,13 @@ $(document).ready(function() {
 
   Orders.prototype.calc = function(){
     if (this.size === "small") {
-      price += 10;
+      price += 9.99;
     } else if (this.size === "medium") {
-      price += 14;
+      price += 13.99;
     } else if (this.size === "large") {
-      price += 17;
+      price += 17.99;
     } else if (this.size === "giant") {
-      price += 30;
+      price += 49.99;
     }
 
     price += this.toppings.length * 2;
@@ -38,9 +38,15 @@ $(document).ready(function() {
   });
 
 
+
+
    order1.calc();
 
-document.getElementById("test").innerHTML = price;
+document.getElementById("test1").innerHTML = order1.name;
+document.getElementById("test2").innerHTML = order1.size;
+document.getElementById("test3").innerHTML = order1.toppings;
+document.getElementById("test4").innerHTML = "$" + price.toFixed(2);
+//$("input#name").val("");
 
 
 

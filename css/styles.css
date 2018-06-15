@@ -1,3 +1,29 @@
+body {
+  background-image: url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 input#name {
   width: 300px;
+}
+
+div.container {
+  margin-top: 20px;
+}
+
+div.selection {
+  border: solid;
+  height: 600px;
+  background-color: white;
+  opacity: .8;
+}
+
+div.output {
+  border: solid;
+  height: 600px;
+    background-color: white;
+    opacity: .8;
 }
