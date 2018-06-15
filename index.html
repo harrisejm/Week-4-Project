@@ -14,14 +14,40 @@
   <div class="jumbotron">
     <h1 class="title">Eddie's World Famous Pizza</h1>
   </div>
+
 <div class="row">
   <div class="col-md-6 selection">
 
   <form id="formOne">
     <div class="form-group">
-      <label for="person1">Enter Name</label>
+      <h2>Enter Name</h2>
       <input id="name" class="form-control" type="text">
   </div>
+  <button type="button" class="takeOut">Take Out</button>
+  <button type="button" class="delivery">Delivery</button>
+
+
+        <div class="address">
+            <div class="form-group">
+              <label for="street">Street</label>
+              <input type="text" class="form-control street">
+              </div>
+              <div class="form-group">
+                  <label for="city">City</label>
+                  <input type="text" class="form-control city">
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control state">
+                  </div>
+                  <div class="form-group">
+                      <label for="zip">Zip Code</label>
+                      <input type="text" class="form-control zip">
+                    </div>
+                </div>
+
+ <div class="pizzaOrder">
+
   <h2>Select Pizza Size</h2>
       <div class="radio">
       <label>
@@ -59,28 +85,45 @@
       <input type="checkbox" name="toppings" value="Black olives">Black olives <strong>+$2.00</strong><br>
   </div>
 
+</div>
 
-
+<div class="orderButton1">
     <button type="submit" class="addOrder">Add to Order</button>
+</div>
   </form>
+  <div class="orderButton2">
     <button type="click" class="checkOut">Check Out</button>
+  </div>
+
   </div>
 
   <div class="col-md-6 output">
     <h1>Order Information:</h1>
-     <p id="test1"></p>
-     <p id="test2"></p>
+     <p id="outPutName"></p>
+    <p id="outPutAddress"></p>
+     <p id="outPutTotalPrice"></p>
      <ul id="orderInfo">
      </ul>
 
-
-
-     <p id="test3"></p>
      <p id="test4"></p>
   </div>
+</div>
+
+<div class="final">
+  <div class="finalAddress">
+    <p id="outPutName11"></p>
+    <p id="outPutAddress11"></p>
+  </div>
+
+  <div class="finalPrice">
+    <p id="outPutTotalPrice11"></p>
+  </div>
+
 
 </div>
 
+
+</div>
 
 </body>
 </html>

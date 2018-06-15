@@ -36,8 +36,17 @@ $(document).ready(function() {
     event.preventDefault();
 /////Values
    var name = $("input#name").val();
+   var street = $("input.street").val();
+   var city = $("input.city").val();
+   var state = $("input.state").val();
+    var zip = $("input.zip").val();
+
+
    var size = $("input:radio[name=size]:checked").val();
 //////
+
+
+
   var order1 = new Orders(name, size);
 
   $("input:checkbox[name=toppings]:checked").each(function(){
@@ -48,17 +57,39 @@ $(document).ready(function() {
   }
 
   order1.calc();
+document.getElementById("outPutName").innerHTML = order1.name;
+document.getElementById("outPutName11").innerHTML = order1.name;
 
-document.getElementById("test1").innerHTML = order1.name;
-document.getElementById("test2").innerHTML = "Total: $" + priceTotal.toFixed(2);
-//document.getElementById("test2").innerHTML = order1.size;
+document.getElementById("outPutAddress").innerHTML = street + "</br>" + city + " " + state + ", " + zip;
+document.getElementById("outPutAddress11").innerHTML = street + "</br>" + city + " " + state + ", " + zip;
+
+document.getElementById("outPutTotalPrice").innerHTML = "Total: $" + priceTotal.toFixed(2);
 $("ul#orderInfo").append("<li><span class='pizzaInfo'>" + order1.displayOrder() + "</span></li>");
 
-//document.getElementById("test3").innerHTML = order1.toppings;
+document.getElementById("outPutTotalPrice11").innerHTML = "Total: $" + priceTotal.toFixed(2);
 
-//$("input#name").val("");
 
 
   });
+
+  $("button.delivery").click(function() {
+     $(".address").show();
+     $(".pizzaOrder").show();
+     $(".orderButton1").show();
+      $(".orderButton2").show();
+     $(".takeOut").hide();
+     $(".delivery").hide();
+
+    });
+
+    $("button.takeOut").click(function() {
+      $(".pizzaOrder").show();
+      $(".orderButton1").show();
+      $(".orderButton2").show();
+       $(".takeOut").hide();
+       $(".delivery").hide();
+      });
+
+
 
 });

@@ -32,7 +32,7 @@ div.container {
 
 div.selection {
   border: solid;
-  height: 600px;
+  min-height: 600px;
   background-color: white;
   opacity: .8;
   border-radius: 10px
@@ -40,16 +40,36 @@ div.selection {
 
 div.output {
   border: solid;
-  height: 600px;
+  min-height: 600px;
     background-color: white;
     opacity: .8;
     border-radius: 10px
 }
 
-div.form-group {
-  font-size:  
+div.final {
+  border: solid;
+  min-height: 600px;
+    background-color: white;
+    opacity: .8;
+    border-radius: 10px
 }
 
+div.finalAddress {
+  font-size: 30px;
+  margin: 40px;
+}
+
+div.finalPrice {
+  font-size: 20px;
+  margin: 40px;
+
+}
+
+
+
+div.form-group {
+  font-size:
+}
 
 button {
   border: solid;
@@ -65,4 +85,28 @@ button:active {
 
 button.checkOut {
  background-color: red;
+}
+
+
+
+
+p.options {
+  font-size: 30px
+}
+
+.address {
+  display: none;
+}
+.pizzaOrder {
+  display: none;
+}
+.orderButton1 {
+  display: none;
+}
+.orderButton2 {
+  display: none;
+}
+
+.street, .city, .state, .zip {
+  border-color: red;
 }
