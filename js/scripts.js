@@ -81,15 +81,15 @@ $(document).ready(function() {
 
     document.getElementById("outPutName").innerHTML = order1.name;
     document.getElementById("outPutName2").innerHTML = order1.name;
-    document.getElementById("outPutAddress").innerHTML = street + "</br>" + city + " " + state + ", " + zip;
-    document.getElementById("outPutAddress2").innerHTML = street + "</br>" + city + " " + state + ", " + zip;
+    document.getElementById("outPutAddress").innerHTML = street + "</br>" + city + " " + state + " " + zip;
+    document.getElementById("outPutAddress2").innerHTML = street + "</br>" + city + " " + state + " " + zip;
     document.getElementById("outPutTotalPrice").innerHTML = "Total: $" + priceTotal.toFixed(2);
     document.getElementById("outPutTotalPrice2").innerHTML = "Price: $" + priceTotal.toFixed(2);
     document.getElementById("tax").innerHTML = "Tax: $" + tax.toFixed(2);
     document.getElementById("finalPrice").innerHTML = "Total: $" + (priceTotal + tax).toFixed(2);
     $("ul#orderInfo").append("<li><span class='pizzaInfo'>" + order1.displayOrder() + "</span></li>");
     $("ul#orderInfo2").append("<li><span class='pizzaInfo'>" + order1.displayOrder() + "</span></li>");
-    
+
     $(".orderCheckOut").show();
   });
 
