@@ -11,129 +11,136 @@
 </head>
 <body>
   <div class="container">
-  <div class="jumbotron">
-    <h1 class="title">Eddie's World Famous Pizza</h1>
-  </div>
+    <div class="jumbotron">
+      <h1 class="title">Eddie's World Famous Pizza</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-6 selection">
+    <div class="row">
+      <div class="col-md-6 selection">
 
-  <form id="formOne">
-    <div class="form-group">
-      <h2>Enter Name</h2>
-      <input id="name" class="form-control" type="text">
-  </div>
-  <button type="button" class="takeOut">Take Out</button>
-  <button type="button" class="delivery">Delivery</button>
+        <form id="formOne">
+          <div class="intro">
+            <p>Welcome to Eddie's World Famous Pizza, home of the best pizza in the world.  To place an order, please select <strong>take out</strong> or <strong>Delivery</strong></p>
+            <button type="button" class="takeOut">Take Out</button>
+            <button type="button" class="delivery">Delivery</button>
+          </div>
+
+          <div class="form-group nameC">
+            <h2>Enter Name</h2>
+            <input id="name" class="form-control" type="text">
+          </div>
 
 
-        <div class="address">
+          <div class="address">
             <div class="form-group">
               <label for="street">Street</label>
               <input type="text" class="form-control street">
-              </div>
-              <div class="form-group">
-                  <label for="city">City</label>
-                  <input type="text" class="form-control city">
-                </div>
-                <div class="form-group">
-                    <label for="state">State</label>
-                    <input type="text" class="form-control state">
-                  </div>
-                  <div class="form-group">
-                      <label for="zip">Zip Code</label>
-                      <input type="text" class="form-control zip">
-                    </div>
-                </div>
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" class="form-control city">
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" class="form-control state">
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip Code</label>
+              <input type="text" class="form-control zip">
+            </div>
+          </div>
 
- <div class="pizzaOrder">
+          <div class="pizzaOrder">
 
-  <h2>Select Pizza Size</h2>
-      <div class="radio">
-      <label>
-        <input type="radio" name="size" value="Small" checked>
-        Small 11" <strong>$9.99</strong>
-      </label>
+            <h2>Select Pizza Size</h2>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Small" checked>
+                Small 11" <strong>$9.99</strong>
+              </label>
+            </div>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Medium">
+                Medium 13" <strong>$13.99</strong>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Large">
+                Large 16" <strong>$17.99</strong>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Giant">
+                Giant 60" <strong> $49.99 (Must Order 24 hours in advance)</strong>
+              </label>
+            </div>
+
+            <h2>Select Toppings</h2>
+            <div class="form-group">
+              <input type="checkbox" name="toppings" value="Pepperoni">Extra Cheese <strong>+$2.00</strong><br>
+              <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni <strong>+$2.00</strong><br>
+              <input type="checkbox" name="toppings" value="Bacon">Bacon <strong>+$2.00</strong><br>
+              <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms <strong>+$2.00</strong><br>
+              <input type="checkbox" name="toppings" value="Onions">Onions <strong>+$2.00</strong><br>
+              <input type="checkbox" name="toppings" value="Black olives">Black olives <strong>+$2.00</strong><br>
+            </div>
+
+          </div>
+
+          <div class="orderButton1">
+            <button type="submit" class="addOrder">Add to Order</button>
+          </div>
+        </form>
+        <div class="orderCheckOut">
+          <button type="click" class="checkOut">Check Out</button>
+        </div>
+
+      </div>
+
+      <div class="col-md-6 output">
+        <h1>Order Information:</h1>
+        <p id="outPutName"></p>
+        <p id="outPutAddress"></p>
+        <p id="outPutTotalPrice"></p>
+        <ul id="orderInfo">
+        </ul>
+
+        <p id="test4"></p>
+      </div>
     </div>
+    
+    <div class="orderConfirm">
 
-    <div class="radio">
-      <label>
-        <input type="radio" name="size" value="Medium">
-        Medium 13" <strong>$13.99</strong>
-      </label>
+      <div class="final">
+        <div class="finalHeader">
+          <h2>Order Confirmation</h2>
+          <p>Your order will be ready in 45 - 60 minutes</p>
+        </div>
+
+        <div class="finalName">
+          <p id="outPutName2"></p>
+        </div>
+
+        <div class="finalAddress">
+          <p id="outPutAddress2"></p>
+        </div>
+
+        <div class="finalPrice">
+          <ul id="orderInfo2">
+          </ul>
+          <div class="box">
+            <p id="outPutTotalPrice2"></p>
+            <p id="tax"></p>
+          </div>
+        </br>
+        <p id="finalPrice"></p>
+      </div>
     </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="size" value="Large">
-        Large 16" <strong>$17.99</strong>
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="size" value="Giant">
-        Giant 60" <strong> $49.99 (Must Order 24 hours in advance)</strong>
-      </label>
-    </div>
-
-  <h2>Select Toppings</h2>
-  <div class="form-group">
-    <input type="checkbox" name="toppings" value="Pepperoni">Extra Cheese <strong>+$2.00</strong><br>
-      <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni <strong>+$2.00</strong><br>
-      <input type="checkbox" name="toppings" value="Bacon">Bacon <strong>+$2.00</strong><br>
-      <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms <strong>+$2.00</strong><br>
-      <input type="checkbox" name="toppings" value="Onions">Onions <strong>+$2.00</strong><br>
-      <input type="checkbox" name="toppings" value="Black olives">Black olives <strong>+$2.00</strong><br>
   </div>
-
-</div>
-
-<div class="orderButton1">
-    <button type="submit" class="addOrder">Add to Order</button>
-</div>
-  </form>
-  <div class="orderCheckOut">
-    <button type="click" class="checkOut">Check Out</button>
-  </div>
-
-  </div>
-
-  <div class="col-md-6 output">
-    <h1>Order Information:</h1>
-     <p id="outPutName"></p>
-    <p id="outPutAddress"></p>
-     <p id="outPutTotalPrice"></p>
-     <ul id="orderInfo">
-     </ul>
-
-     <p id="test4"></p>
-  </div>
-</div>
-
-<div class="orderConfirm">
-
-<div class="final">
-  <div class="finalHeader">
-    <h2>Order Confirmation</h2>
-    <p>Your order will be ready in 45 - 60 minutes</p>
-  </div>
-
-  <div class="finalAddress">
-    <p id="outPutName2"></p>
-    <p id="outPutAddress2"></p>
-  </div>
-
-  <div class="finalPrice">
-    <ul id="orderInfo2">
-    </ul>
-    <div class="box">
-      <p id="outPutTotalPrice2"></p>
-      <p id="tax"></p>
-    </div>
-  </br>
-    <p id="finalPrice"></p>
-  </div>
-</div>
-</div>
 
 
 </div>

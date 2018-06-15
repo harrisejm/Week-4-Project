@@ -46,7 +46,12 @@ div.output {
     border-radius: 10px
 }
 
-.final {
+div.intro {
+  margin: 30px;
+  font-size: 15px;s\
+}
+
+div.final {
   border: solid;
   background-color: white;
   opacity: .8;
@@ -57,15 +62,19 @@ div.orderConfirm {
   display: none;
 }
 
+div.finalName {
+  font-size: 30px;
+  margin: 40px;
+}
+
 div.finalAddress {
   font-size: 30px;
   margin: 40px;
-
 }
 
 div.finalPrice {
   font-size: 20px;
-  margin-top: 40px;
+  margin-left: 40px;
 
 }
 
@@ -73,7 +82,7 @@ div.box {
   border-top: solid;
   border-bottom: solid;
   width: 200px;
-  margin: 30px
+
 }
 
 div.finalHeader {
@@ -107,6 +116,9 @@ p.options {
   font-size: 30px
 }
 
+.nameC {
+  display: none;
+}
 .address {
   display: none;
 }
@@ -120,6 +132,7 @@ p.options {
   display: none;
 }
 
-.street, .city, .state, .zip {
+.street, .city, .state, .zip, #name {
   border-color: red;
+  border-width: 1px;
 }
