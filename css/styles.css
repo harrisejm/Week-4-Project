@@ -5,6 +5,22 @@ body {
   background-attachment: fixed;
 }
 
+div.jumbotron {
+  background-image: url("../img/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border: solid;
+}
+
+div h1.title {
+  color: #FF6347;
+  font-family: cursive;
+  text-align: center;
+text-shadow: 2px 2px #8B0000;
+font-size: 80px;
+
+}
 
 input#name {
   width: 300px;
@@ -19,6 +35,7 @@ div.selection {
   height: 600px;
   background-color: white;
   opacity: .8;
+  border-radius: 10px
 }
 
 div.output {
@@ -26,4 +43,26 @@ div.output {
   height: 600px;
     background-color: white;
     opacity: .8;
+    border-radius: 10px
+}
+
+div.form-group {
+  font-size:  
+}
+
+
+button {
+  border: solid;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+  margin-bottom: 20px;
+  border-color: black;
+}
+button:active {
+  box-shadow: 2px 2px 2px #003300;
+  transform: translate(3px, 3px);
+}
+
+button.checkOut {
+ background-color: red;
 }

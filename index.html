@@ -11,7 +11,9 @@
 </head>
 <body>
   <div class="container">
-
+  <div class="jumbotron">
+    <h1 class="title">Eddie's World Famous Pizza</h1>
+  </div>
 <div class="row">
   <div class="col-md-6 selection">
 
@@ -49,7 +51,7 @@
 
   <h2>Select Toppings</h2>
   <div class="form-group">
-    <input type="checkbox" name="toppings" value="Pepperoni">Extra Cheese +$2.00<br>
+    <input type="checkbox" name="toppings" value="Pepperoni">Extra Cheese <strong>+$2.00</strong><br>
       <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni <strong>+$2.00</strong><br>
       <input type="checkbox" name="toppings" value="Bacon">Bacon <strong>+$2.00</strong><br>
       <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms <strong>+$2.00</strong><br>
@@ -59,10 +61,13 @@
 
 
 
-    <button type="submit" class="btn">Place Order</button>
+    <button type="submit" class="addOrder">Add to Order</button>
   </form>
+    <button type="click" class="checkOut">Check Out</button>
   </div>
+
   <div class="col-md-6 output">
+    <h1>Order Information:</h1>
      <p id="test1"></p>
      <p id="test2"></p>
      <ul id="orderInfo">

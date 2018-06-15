@@ -24,10 +24,12 @@ $(document).ready(function() {
       priceTotal += 49.99;
       pricePizza = 49.99;
     }
-
-    priceTotal += this.toppings.length * 2;
     pricePizza += this.toppings.length * 2;
+    priceTotal += this.toppings.length * 2;
+  }
 
+  Orders.prototype.displayOrder = function(){
+    return "<strong>" + "$" + pricePizza.toFixed(2) + " : " + this.size + "</strong>" + " pizza with " + this.toppings;
   }
 
   $("#formOne").submit(function(event) {
@@ -45,14 +47,12 @@ $(document).ready(function() {
     order1.toppings[0] = " Cheese";
   }
 
-
-
-   order1.calc();
+  order1.calc();
 
 document.getElementById("test1").innerHTML = order1.name;
 document.getElementById("test2").innerHTML = "Total: $" + priceTotal.toFixed(2);
 //document.getElementById("test2").innerHTML = order1.size;
-$("ul#orderInfo").append("<li><span class='pizzaInfo'>" + "<strong>" + "$" + pricePizza.toFixed(2) + " : " + order1.size + "</strong>" + " pizza with " + order1.toppings + "</span></li>");
+$("ul#orderInfo").append("<li><span class='pizzaInfo'>" + order1.displayOrder() + "</span></li>");
 
 //document.getElementById("test3").innerHTML = order1.toppings;
 
