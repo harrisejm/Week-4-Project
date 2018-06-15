@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
   var test = "";
-  var price = 0;
+  var priceTotal = 0;
+  var pricePizza = 0;
 
   var Orders = function(name, size, toppings) {
     this.name = name;
@@ -10,18 +11,22 @@ $(document).ready(function() {
   }
 
   Orders.prototype.calc = function(){
-    if (this.size === "small") {
-      price += 9.99;
-    } else if (this.size === "medium") {
-      price += 13.99;
-    } else if (this.size === "large") {
-      price += 17.99;
-    } else if (this.size === "giant") {
-      price += 49.99;
+    if (this.size === "Small") {
+      priceTotal += 9.99;
+      pricePizza = 9.99;
+    } else if (this.size === "Medium") {
+      priceTotal += 13.99;
+      pricePizza = 13.99;
+    } else if (this.size === "Large") {
+      priceTotal += 17.99;
+      pricePizza = 17.99;
+    } else if (this.size === "Giant") {
+      priceTotal += 49.99;
+      pricePizza = 49.99;
     }
 
-    price += this.toppings.length * 2;
-
+    priceTotal += this.toppings.length * 2;
+    pricePizza += this.toppings.length * 2;
 
   }
 
@@ -34,20 +39,24 @@ $(document).ready(function() {
   var order1 = new Orders(name, size);
 
   $("input:checkbox[name=toppings]:checked").each(function(){
-   order1.toppings.push($(this).val());
+   order1.toppings.push(" " + $(this).val());
   });
-
+  if (order1.toppings.length === 0){
+    order1.toppings[0] = " Cheese";
+  }
 
 
 
    order1.calc();
 
 document.getElementById("test1").innerHTML = order1.name;
-document.getElementById("test2").innerHTML = order1.size;
-document.getElementById("test3").innerHTML = order1.toppings;
-document.getElementById("test4").innerHTML = "$" + price.toFixed(2);
-//$("input#name").val("");
+document.getElementById("test2").innerHTML = "Total: $" + priceTotal.toFixed(2);
+//document.getElementById("test2").innerHTML = order1.size;
+$("ul#orderInfo").append("<li><span class='pizzaInfo'>" + "<strong>" + "$" + pricePizza.toFixed(2) + " : " + order1.size + "</strong>" + " pizza with " + order1.toppings + "</span></li>");
 
+//document.getElementById("test3").innerHTML = order1.toppings;
+
+//$("input#name").val("");
 
 
   });
