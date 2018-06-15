@@ -46,30 +46,42 @@ div.output {
     border-radius: 10px
 }
 
-div.final {
+.final {
   border: solid;
-  min-height: 600px;
-    background-color: white;
-    opacity: .8;
-    border-radius: 10px
+  background-color: white;
+  opacity: .8;
+  border-radius: 10px
+}
+
+div.orderConfirm {
+  display: none;
 }
 
 div.finalAddress {
   font-size: 30px;
   margin: 40px;
+
 }
 
 div.finalPrice {
   font-size: 20px;
+  margin-top: 40px;
+
+}
+
+div.box {
+  border-top: solid;
+  border-bottom: solid;
+  width: 200px;
+  margin: 30px
+}
+
+div.finalHeader {
   margin: 40px;
 
 }
 
 
-
-div.form-group {
-  font-size:
-}
 
 button {
   border: solid;
@@ -77,6 +89,7 @@ button {
   box-shadow: 5px 5px 5px black;
   margin-bottom: 20px;
   border-color: black;
+
 }
 button:active {
   box-shadow: 2px 2px 2px #003300;
@@ -103,7 +116,7 @@ p.options {
 .orderButton1 {
   display: none;
 }
-.orderButton2 {
+.orderCheckOut {
   display: none;
 }
 

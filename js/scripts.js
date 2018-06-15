@@ -46,7 +46,6 @@ $(document).ready(function() {
 //////
 
 
-
   var order1 = new Orders(name, size);
 
   $("input:checkbox[name=toppings]:checked").each(function(){
@@ -57,18 +56,24 @@ $(document).ready(function() {
   }
 
   order1.calc();
+
+   var tax = (priceTotal / 100) * 10.4;
 document.getElementById("outPutName").innerHTML = order1.name;
-document.getElementById("outPutName11").innerHTML = order1.name;
+document.getElementById("outPutName2").innerHTML = order1.name;
 
 document.getElementById("outPutAddress").innerHTML = street + "</br>" + city + " " + state + ", " + zip;
-document.getElementById("outPutAddress11").innerHTML = street + "</br>" + city + " " + state + ", " + zip;
+document.getElementById("outPutAddress2").innerHTML = street + "</br>" + city + " " + state + ", " + zip;
 
 document.getElementById("outPutTotalPrice").innerHTML = "Total: $" + priceTotal.toFixed(2);
 $("ul#orderInfo").append("<li><span class='pizzaInfo'>" + order1.displayOrder() + "</span></li>");
 
-document.getElementById("outPutTotalPrice11").innerHTML = "Total: $" + priceTotal.toFixed(2);
+
+$("ul#orderInfo2").append("<li><span class='pizzaInfo'>" + order1.displayOrder() + "</span></li>");
 
 
+document.getElementById("outPutTotalPrice2").innerHTML = "Price: $" + priceTotal.toFixed(2);
+document.getElementById("tax").innerHTML = "Tax: $" + tax.toFixed(2);
+document.getElementById("finalPrice").innerHTML = "Total: $" + (priceTotal + tax).toFixed(2);
 
   });
 
@@ -76,7 +81,7 @@ document.getElementById("outPutTotalPrice11").innerHTML = "Total: $" + priceTota
      $(".address").show();
      $(".pizzaOrder").show();
      $(".orderButton1").show();
-      $(".orderButton2").show();
+      $(".orderCheckOut").show();
      $(".takeOut").hide();
      $(".delivery").hide();
 
@@ -85,11 +90,15 @@ document.getElementById("outPutTotalPrice11").innerHTML = "Total: $" + priceTota
     $("button.takeOut").click(function() {
       $(".pizzaOrder").show();
       $(".orderButton1").show();
-      $(".orderButton2").show();
+      $(".orderCheckOut").show();
        $(".takeOut").hide();
        $(".delivery").hide();
       });
 
+      $("button.checkOut").click(function() {
+    $(".orderConfirm").show();
+    $(".row").hide();
 
+   });
 
 });
